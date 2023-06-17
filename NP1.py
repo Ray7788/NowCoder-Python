@@ -1,2 +1,2 @@
-sys1 = 'Hello World!'
+str1 = 'Hello World!'
 print(sys1)
