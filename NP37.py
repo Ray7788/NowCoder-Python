@@ -1,0 +1,5 @@
+k,x,y = input().split()
+print(float(k) <= float(x))
+print(float(k) >= float(y))
+# k, x, y = map(float,input().split())
+# print(k <= x, k >= y, sep = "\n")
