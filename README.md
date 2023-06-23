@@ -101,7 +101,11 @@
       [(1, 2, 3), (4, 5, 6)
   ```
 * ord() 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值
-* 进制转换 hex  16进制 # int  10进制 # oct  8进制 # bin  2进制
+* 进制转换
+  > hex  16进制
+  > int  10进制
+  >  oct  8进制
+  >  bin  2进制
 * count() 方法用于统计字符串里某个字符或子字符串出现的次数。可选参数为在字符串搜索的开始与结束位置。
 * str.index(substring, beg=0, end=len(string))，
   > substring -- 指定检索的字符串。 beg -- 开始索引，默认为 0。 end -- 结束索引，默认为字符串的长度。
@@ -109,3 +113,22 @@
 * round()保留几位小数 返回浮点数x的四舍五入值。
 * eval()神奇公式： 用来执行一个字符串表达式，并返回表达式的值。
 * OOP
+* 正则表达式
+    * `re.match(pattern, string, flags=0)` 尝试从字符串的起始位置匹配一个模式，如果不是起始位置匹配成功的话，match()就返回None
+       * pattern：匹配的正则表达式
+       * string：要匹配的字符串。
+       * fl：标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等等。参见：正则表达式修饰符 - 可选标志
+    * `re.sub(pattern, repl, string, count=0, flags=0)` re模块提供了re.sub用于替换字符串中的匹配项。
+      * pattern : 正则中的模式字符串。
+      * repl : 替换的字符串，也可为一个函数。
+      * string : 要被查找替换的原始字符串。
+      * count : 模式匹配后替换的最大次数，默认 0 表示替换所有的匹配。
+      * flags : 编译时用的匹配模式，数字形式。
+    * `re.search(pattern, string, flags=0)` 扫描整个字符串并返回第一个成功的匹配
+      ```
+      import re
+ 
+      print(re.search('www', 'www.runoob.com').span())  # 在起始位置匹配
+      print(re.search('com', 'www.runoob.com').span())         # 不在起始位置匹配
+      ```
+* 未完待续……
