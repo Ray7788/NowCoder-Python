@@ -21,7 +21,7 @@
   str.split(' ', 1); # 以空格为分隔符，分隔成两个
   ```
 * 添加：
-  * `append`在列表尾部添加，
+  * `append()`在列表尾部添加，
   * `insert(index, obj)`可以指定添加顺序
 * 删除：
   * `list.remove(obj)`移除列表中某个值的第一个匹配项
@@ -40,9 +40,8 @@
      print(my_list[:3])   # 输出: [10, 20, 30]
      print(my_list[2:])   # 输出: [30, 40, 50]
      ```
-* 指数相乘用2个乘号 **
+* 指数相乘用2个乘号 `**`
 * 在Python中，有多种方式可以格式化输出。以下是其中几种常用的方式：
-
    1. 通过占位符格式化输出：可以使用占位符（例如`%`）将要输出的值插入到字符串中的适当位置。常见的占位符有 `%s`（字符串）、`%d`（整数）、`%f`（浮点数）等。例如：
    
    ```python
@@ -70,7 +69,7 @@
 * x与y `x and y`，x或y `x or y`，非x `not int(x)`
 * `x&y` 位与、`x|y` 位或，输出按照十进制的形式。
 * `name in lst`检测name是否在lst中
-* map 映射功能
+* map(function, iterable,) 函数会根据提供的函数对指定序列做映射。第一个参数 function 以参数序列中的每一个元素调用 function 函数，返回包含每次 function 函数返回值的新列表。
 * 判断一个列表是空
   ```
    if len(my_list) == 0
@@ -101,4 +100,12 @@
       >>> zip(*zipped)          # 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式
       [(1, 2, 3), (4, 5, 6)
   ```
-  * ord
+* ord() 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值
+* 进制转换 hex  16进制 # int  10进制 # oct  8进制 # bin  2进制
+* count() 方法用于统计字符串里某个字符或子字符串出现的次数。可选参数为在字符串搜索的开始与结束位置。
+* str.index(substring, beg=0, end=len(string))，
+  > substring -- 指定检索的字符串。 beg -- 开始索引，默认为 0。 end -- 结束索引，默认为字符串的长度。
+* [字符串处理支持多种操作](https://www.runoob.com/python3/python3-string.html)
+* round()保留几位小数 返回浮点数x的四舍五入值。
+* eval()神奇公式： 用来执行一个字符串表达式，并返回表达式的值。
+* OOP
