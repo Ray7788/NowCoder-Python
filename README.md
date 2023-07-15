@@ -5,9 +5,12 @@
 * 进制转换`int(i,16)`， `i`代表要被转换的数字 `16`代表转换成十六进制
 * 大小写转换
   ```
+  str1 = "www.mAnhuAn.net is learNing pyThon's weBsiTe"
   str1.lower() # 全小写
   str1.upper() # 全大写
-  str1.capitalize()  # 首字母大写
+  str1.capitalize()  # 全字符串中首字母大写
+  str_val = str.title() # 字符串中每个单词的首字母大写
+
   ```
 * `strip([chars])` 方法用于移除字符串头尾指定的字符（默认为空格）或字符序列。
   > chars -- 移除字符串头尾指定的字符序列。
