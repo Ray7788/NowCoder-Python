@@ -1,6 +1,18 @@
-# NowCoder Practice Python  |  牛客网python练习 [牛客题霸部分](https://www.nowcoder.com/exam/oj?page=1&tab=Python篇&topicId=314)
+# NowCoder Practice Python  |  牛客网python练习: [牛客题霸部分](https://www.nowcoder.com/exam/oj?page=1&tab=Python篇&topicId=314)
 夯实基础部分
 ## Key Points ✏️
+* int 类型的整数具有任意精度。这意味着整数的取值范围仅受限于可用内存，而不像某些编程语言中整数的大小受限于固定的字节数;
+* 在 Python 中，float 类型的浮点数通常是基于 IEEE 754 双精度浮点数标准存储的，这意味着它在内存中占用 64 位（8 字节）。其取值范围和精度如下：
+
+  范围：约为 1.8 × 10^−308 到 1.8×10^308 精度：有效数字约为 15-17 位十进制数
+
+* Binary: 加号 + 作为二元运算符时用于将两个操作数相加 uniary作为一元运算符时用于表示数值的正号
+* 牢记运算优先顺序
+  ```
+      3------9 输出 *12*
+      3+-+-+-2 输出 *1*
+      3*4**5 输出 48
+  ```
 * 巧用`type`判断类型
 * 进制转换`int(i,16)`， `i`代表要被转换的数字 `16`代表转换成十六进制
 * 大小写转换
