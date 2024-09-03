@@ -1,5 +1,6 @@
-# NowCoder Practice Python  |  牛客网python练习: [牛客题霸部分](https://www.nowcoder.com/exam/oj?page=1&tab=Python篇&topicId=314)
+NowCoder Practice Python  |  牛客网python练习: [牛客题霸部分](https://www.nowcoder.com/exam/oj?page=1&tab=Python篇&topicId=314)
 夯实基础部分
+===========
 ## Key Points ✏️
 * int 类型的整数具有任意精度。这意味着整数的取值范围仅受限于可用内存，而不像某些编程语言中整数的大小受限于固定的字节数;
 * 在 Python 中，float 类型的浮点数通常是基于 IEEE 754 双精度浮点数标准存储的，这意味着它在内存中占用 64 位（8 字节）。其取值范围和精度如下：
@@ -56,6 +57,10 @@
      print(my_list[2:])   # 输出: [30, 40, 50]
      ```
 * 指数相乘用2个乘号 `**`
+
+## String 字符串格式化
+python最先的格式化字符串方法是%，但他的致命缺点是支持的类型有限，只支持int,str,double,其他所有类型只能转换为这几个类型，还有如果传递的是元组，那么必须还要传入一个单值元组，为此，添加了str.format（）以解决％-formatting中的一些问题，
+
 * 在Python中，有多种方式可以格式化输出。以下是其中几种常用的方式：
    1. 通过占位符格式化输出：可以使用占位符（例如`%`）将要输出的值插入到字符串中的适当位置。常见的占位符有 `%s`（字符串）、`%d`（整数）、`%f`（浮点数）等。例如：
    
@@ -80,6 +85,8 @@
    age = 25
    print(f"My name is {name} and I'm {age} years old.")
    ```
+
+   
 * `x//y`用来得商（整除），`x%y`用来得余数，`{/y:.2f}`输出x除以y的非整除结果，保留两位小数
 * x与y `x and y`，x或y `x or y`，非x `not int(x)`
 * `x&y` 位与、`x|y` 位或，输出按照十进制的形式。
@@ -114,6 +121,18 @@
       [(1, 4), (2, 5), (3, 6)]
       >>> zip(*zipped)          # 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式
       [(1, 2, 3), (4, 5, 6)
+  ```
+  
+## 迭代器和生成器
+* 将列表生成式中[]改成() 之后数据结构是否改变？ 答案：会发生改变，从列表变为生成器:
+  ```shell
+  >>> L = [x*x for x in range(10)]
+  >>> L
+  [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+  >>> g = (x*x for x in range(10))
+  >>> g
+  <generator object <genexpr> at 0x0000028F8B774200>
+  >>>
   ```
 * 666 and True => 666  
 * ord() 函数是 chr() 函数（对于8位的ASCII字符串）或 unichr() 函数（对于Unicode对象）的配对函数，它以一个字符（长度为1的字符串）作为参数，返回对应的 ASCII 数值，或者 Unicode 数值
